@@ -22,6 +22,7 @@ from __future__ import print_function
 import math
 
 import tensorflow as tf
+import tensorflow.contrib as tc
 
 
 def prepare_model_settings(label_count, sample_rate, clip_duration_ms,
@@ -40,15 +41,18 @@ def prepare_model_settings(label_count, sample_rate, clip_duration_ms,
   Returns:
     Dictionary containing common settings.
   """
-  desired_samples = int(sample_rate * clip_duration_ms / 1000)
-  window_size_samples = int(sample_rate * window_size_ms / 1000)
-  window_stride_samples = int(sample_rate * window_stride_ms / 1000)
+  desired_samples = int(sample_rate * clip_duration_ms / 1000)    # 音频总帧数
+  window_size_samples = int(sample_rate * window_size_ms / 1000)      # 窗口大小
+  window_stride_samples = int(sample_rate * window_stride_ms / 1000)      # 滑动窗口步长
   length_minus_window = (desired_samples - window_size_samples)
   if length_minus_window < 0:
     spectrogram_length = 0
   else:
-    spectrogram_length = 1 + int(length_minus_window / window_stride_samples)
-  fingerprint_size = dct_coefficient_count * spectrogram_length
+    spectrogram_length = 1 + int(length_minus_window / window_stride_samples)   # 频谱总长度
+
+  # todo ????  输入的size？
+  fingerprint_size = dct_coefficient_count * spectrogram_length   # dct_coefficient_count: How many bins to use for the MFCC fingerprint
+
   return {
       'desired_samples': desired_samples,
       'window_size_samples': window_size_samples,
@@ -106,6 +110,8 @@ def create_model(fingerprint_input, model_settings, model_architecture,
   elif model_architecture == 'low_latency_svdf':
     return create_low_latency_svdf_model(fingerprint_input, model_settings,
                                          is_training, runtime_settings)
+  elif model_architecture == 'mobilenetv2':
+    return create_mobilenetv2(fingerprint_input, model_settings,is_training)
   else:
     raise Exception('model_architecture argument "' + model_architecture +
                     '" not recognized, should be one of "single_fc", "conv",' +
@@ -153,13 +159,91 @@ def create_single_fc_model(fingerprint_input, model_settings, is_training):
   fingerprint_size = model_settings['fingerprint_size']
   label_count = model_settings['label_count']
   weights = tf.Variable(
-      tf.truncated_normal([fingerprint_size, label_count], stddev=0.001))
+      tf.truncated_normal([fingerprint_size, label_count], stddev=0.001))           # 权重初始化：截断的正态分布
   bias = tf.Variable(tf.zeros([label_count]))
   logits = tf.matmul(fingerprint_input, weights) + bias
   if is_training:
     return logits, dropout_prob
   else:
     return logits
+
+
+
+def create_mobilenetv2(fingerprint_input, model_settings, is_training):
+
+
+    normalizer = tc.layers.batch_norm
+    bn_params = {'is_training': is_training}
+
+    lay_para = {'index' : 0, 'normalizer' : normalizer, 'bn_params' : bn_params}
+
+    if is_training:
+        dropout_prob = tf.placeholder(tf.float32, name='dropout_prob')
+    input_frequency_size = model_settings['dct_coefficient_count']
+    input_time_size = model_settings['spectrogram_length']
+
+    fingerprint_4d = tf.reshape(fingerprint_input,
+                              [-1, input_time_size, input_frequency_size, 1])
+
+    output = tc.layers.conv2d(fingerprint_4d, 64, 3, 2, normalizer_fn=normalizer, normalizer_params=bn_params)
+
+
+    def _inverted_bottleneck(lay_para, input, up_sample_rate, channels, subsample):
+        lay_para['index'] += 1
+        stride = 2 if subsample else 1
+        output = tc.layers.conv2d(input, up_sample_rate * input.get_shape().as_list()[-1], 1,
+                                  activation_fn=tf.nn.relu6,
+                                  normalizer_fn=lay_para['normalizer'], normalizer_params=lay_para['bn_params'])
+        output = tc.layers.separable_conv2d(output, None, 3, 1, stride=stride,
+                                            activation_fn=tf.nn.relu6,
+                                            normalizer_fn=lay_para['normalizer'],
+                                            normalizer_params=lay_para['bn_params'])
+        output = tc.layers.conv2d(output, channels, 1, activation_fn=None,
+                                  normalizer_fn=lay_para['normalizer'], normalizer_params=lay_para['bn_params'])
+        if input.get_shape().as_list()[-1] == channels:
+            output = tf.add(input, output)
+        return output
+
+
+    output = _inverted_bottleneck(lay_para, output, 1, 16, 0)
+    output = _inverted_bottleneck(lay_para, output, 6, 24, 1)
+    output = _inverted_bottleneck(lay_para, output, 6, 24, 0)
+    output = _inverted_bottleneck(lay_para, output, 6, 32, 1)
+    output = _inverted_bottleneck(lay_para, output, 6, 32, 0)
+    output = _inverted_bottleneck(lay_para, output, 6, 32, 0)
+    output = _inverted_bottleneck(lay_para, output, 6, 64, 1)
+    output = _inverted_bottleneck(lay_para, output, 6, 64, 0)
+    output = _inverted_bottleneck(lay_para, output, 6, 64, 0)
+    output = _inverted_bottleneck(lay_para, output, 6, 64, 0)
+    output = _inverted_bottleneck(lay_para, output, 6, 96, 0)
+    output = _inverted_bottleneck(lay_para, output, 6, 96, 0)
+    output = _inverted_bottleneck(lay_para, output, 6, 96, 0)
+    output = _inverted_bottleneck(lay_para, output, 6, 160, 1)
+    output = _inverted_bottleneck(lay_para, output, 6, 160, 0)
+    output = _inverted_bottleneck(lay_para, output, 6, 160, 0)
+    output = _inverted_bottleneck(lay_para, output, 6, 320, 0)
+    output = tc.layers.conv2d(output, 1280, 1, normalizer_fn=normalizer, normalizer_params=bn_params)
+    output = tc.layers.avg_pool2d(output, 1)
+    output = tc.layers.conv2d(output, 1000, 1, activation_fn=None)
+
+    out_shape = output.get_shape()
+
+    flattend_out = tf.reshape(output, [-1, out_shape[1] * out_shape[2] * 1000])
+
+    label_count = model_settings['label_count']
+    final_fc_weights = tf.Variable(
+      tf.truncated_normal([int(out_shape[1] * out_shape[2] * 1000), label_count], stddev=0.01))
+    final_fc_bias = tf.Variable(tf.zeros([label_count]))
+
+
+    final_fc = tf.matmul(flattend_out, final_fc_weights) + final_fc_bias
+
+    if is_training:
+        return final_fc, dropout_prob
+    else:
+        return final_fc
+
+
 
 
 def create_conv_model(fingerprint_input, model_settings, is_training):
@@ -214,6 +298,8 @@ def create_conv_model(fingerprint_input, model_settings, is_training):
     dropout_prob = tf.placeholder(tf.float32, name='dropout_prob')
   input_frequency_size = model_settings['dct_coefficient_count']
   input_time_size = model_settings['spectrogram_length']
+
+  # todo ????
   fingerprint_4d = tf.reshape(fingerprint_input,
                               [-1, input_time_size, input_frequency_size, 1])
   first_filter_width = 8

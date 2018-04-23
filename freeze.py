@@ -167,7 +167,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--model_architecture',
       type=str,
-      default='conv',
+      default='mobilenetv2',
       help='What model architecture to use')
   parser.add_argument(
       '--wanted_words',

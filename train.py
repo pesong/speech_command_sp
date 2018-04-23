@@ -150,8 +150,10 @@ def main(_):
   with tf.name_scope('train'), tf.control_dependencies(control_dependencies):
     learning_rate_input = tf.placeholder(
         tf.float32, [], name='learning_rate_input')
-    train_step = tf.train.GradientDescentOptimizer(
-        learning_rate_input).minimize(cross_entropy_mean)
+
+    # train_step = tf.train.GradientDescentOptimizer(learning_rate_input).minimize(cross_entropy_mean)
+    train_step = tf.train.AdamOptimizer(learning_rate_input).minimize(cross_entropy_mean)
+
   predicted_indices = tf.argmax(logits, 1)
   correct_prediction = tf.equal(predicted_indices, ground_truth_input)
   confusion_matrix = tf.confusion_matrix(
@@ -371,7 +373,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--how_many_training_steps',
       type=str,
-      default='100',
+      default='1000',
       help='How many training loops to run',)
   parser.add_argument(
       '--eval_step_interval',
@@ -391,7 +393,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--summaries_dir',
       type=str,
-      default='/model/02_speech_command_sp/retrain_logs/conv',
+      default='/model/02_speech_command_sp/retrain_logs/mobilenetv2',
       help='Where to save summary logs for TensorBoard.')
   parser.add_argument(
       '--wanted_words',
@@ -401,7 +403,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--train_dir',
       type=str,
-      default='/model/02_speech_command_sp/speech_commands_train/conv',
+      default='/model/02_speech_command_sp/speech_commands_train/mobilenetv2',
       help='Directory to write event logs and checkpoint.')
   parser.add_argument(
       '--save_step_interval',
@@ -416,7 +418,8 @@ if __name__ == '__main__':
   parser.add_argument(
       '--model_architecture',
       type=str,
-      default='conv',
+      # default='conv',
+      default='mobilenetv2',
       help='What model architecture to use')
   parser.add_argument(
       '--check_nans',
