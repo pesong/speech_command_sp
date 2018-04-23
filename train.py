@@ -288,13 +288,13 @@ if __name__ == '__main__':
       '--data_url',
       type=str,
       # pylint: disable=line-too-long
-      default='http://download.tensorflow.org/data/speech_commands_v0.01.tar.gz',
+      default=None,
       # pylint: enable=line-too-long
       help='Location of speech training data archive on the web.')
   parser.add_argument(
       '--data_dir',
       type=str,
-      default='/tmp/speech_dataset/',
+      default='/data/speech_command/speech_dataset/',
       help="""\
       Where to download the speech training data to.
       """)
@@ -371,7 +371,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--how_many_training_steps',
       type=str,
-      default='15000,3000',
+      default='100',
       help='How many training loops to run',)
   parser.add_argument(
       '--eval_step_interval',
@@ -381,7 +381,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--learning_rate',
       type=str,
-      default='0.001,0.0001',
+      default='0.001',
       help='How large a learning rate to use when training.')
   parser.add_argument(
       '--batch_size',
@@ -391,7 +391,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--summaries_dir',
       type=str,
-      default='/tmp/retrain_logs',
+      default='/model/02_speech_command_sp/retrain_logs/conv',
       help='Where to save summary logs for TensorBoard.')
   parser.add_argument(
       '--wanted_words',
@@ -401,7 +401,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--train_dir',
       type=str,
-      default='/tmp/speech_commands_train',
+      default='/model/02_speech_command_sp/speech_commands_train/conv',
       help='Directory to write event logs and checkpoint.')
   parser.add_argument(
       '--save_step_interval',
