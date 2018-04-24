@@ -126,7 +126,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--how_many_labels',
       type=int,
-      default=3,
+      default=10,
       help='Number of results to show.')
 
   FLAGS, unparsed = parser.parse_known_args()
