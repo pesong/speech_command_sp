@@ -1,0 +1,2 @@
+model_checkpoint_path: "/model/02_speech_command_sp/speech_commands_train/mobilenetv2/mobilenetv2.ckpt-100"
+all_model_checkpoint_paths: "/model/02_speech_command_sp/speech_commands_train/mobilenetv2/mobilenetv2.ckpt-100"
