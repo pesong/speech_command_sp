@@ -21,4 +21,5 @@ python label_wav.py \
 --graph=/model/02_speech_command_sp/my_frozen_graph_conv.pb \
 --labels=/model/02_speech_command_sp/speech_commands_train/mobilenetv2/mobilenetv2_labels.txt \
 --wav=/data/speech_command/speech_dataset/stop/1a6eca98_nohash_0.wav
+--output_name=logits_layer:0
 

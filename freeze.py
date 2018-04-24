@@ -98,8 +98,8 @@ def create_inference_graph(wanted_words, sample_rate, clip_duration_ms,
       -1, fingerprint_time_size * fingerprint_frequency_size
   ])
 
-  logits = models.create_model(
-      reshaped_input, model_settings, model_architecture, is_training=False,
+  logits,_ = models.create_model(
+      reshaped_input, model_settings, model_architecture, is_training=True,
       runtime_settings=runtime_settings)
 
   # Create an output to use for inference.

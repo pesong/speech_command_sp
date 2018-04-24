@@ -182,15 +182,12 @@ def create_mobilenetv2(fingerprint_input, model_settings, is_training):
     input_frequency_size = model_settings['dct_coefficient_count']
     input_time_size = model_settings['spectrogram_length']
 
-
-
     fingerprint_4d = tf.reshape(fingerprint_input,
                               [-1, input_time_size, input_frequency_size, 1])
 
     with tf.variable_scope('init_conv'):
         output = tc.layers.conv2d(fingerprint_4d, 64, 3, 2,
                                   normalizer_fn=normalizer, normalizer_params=bn_params)
-
 
 
     def _inverted_bottleneck(lay_para, input, up_sample_rate, channels, subsample):
@@ -240,7 +237,6 @@ def create_mobilenetv2(fingerprint_input, model_settings, is_training):
     final_fc_weights = tf.Variable(
       tf.truncated_normal([int(out_shape[1] * out_shape[2] * 1000), label_count], stddev=0.01))
     final_fc_bias = tf.Variable(tf.zeros([label_count]))
-
 
     final_fc = tf.matmul(flattend_out, final_fc_weights) + final_fc_bias
 
@@ -467,7 +463,7 @@ def create_low_latency_conv_model(fingerprint_input, model_settings,
       tf.truncated_normal(
           [second_fc_output_channels, label_count], stddev=0.01))
   final_fc_bias = tf.Variable(tf.zeros([label_count]))
-  final_fc = tf.matmul(final_fc_input, final_fc_weights) + final_fc_bias
+  final_fc = tf.add(tf.matmul(final_fc_input, final_fc_weights) + final_fc_bias)
   if is_training:
     return final_fc, dropout_prob
   else:

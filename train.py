@@ -216,7 +216,7 @@ def main(_):
             fingerprint_input: train_fingerprints,
             ground_truth_input: train_ground_truth,
             learning_rate_input: learning_rate_value,
-            dropout_prob: 0.5
+            dropout_prob: 1.0
         })
     train_writer.add_summary(train_summary, training_step)
     tf.logging.info('Step #%d: rate %f, accuracy %.1f%%, cross entropy %f' %
@@ -373,7 +373,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--how_many_training_steps',
       type=str,
-      default='5000,1000',
+      default='100',
       help='How many training loops to run',)
   parser.add_argument(
       '--eval_step_interval',
@@ -383,7 +383,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--learning_rate',
       type=str,
-      default='0.001,0.0001',
+      default='0.001',
       help='How large a learning rate to use when training.')
   parser.add_argument(
       '--batch_size',
