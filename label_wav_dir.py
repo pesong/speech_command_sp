@@ -59,6 +59,10 @@ def load_labels(filename):
 
 def run_graph(wav_dir, labels, input_layer_name, output_layer_name,
               num_top_predictions):
+
+  ground_truth_string = wav_dir.split('/')[-1]
+  correct_prediction = 0
+  total = 0
   """Runs the audio data through the graph and prints predictions."""
   with tf.Session() as sess:
     # Feed the audio data as input to the graph.
@@ -69,6 +73,7 @@ def run_graph(wav_dir, labels, input_layer_name, output_layer_name,
       if not wav_path or not tf.gfile.Exists(wav_path):
         tf.logging.fatal('Audio file does not exist %s', wav_path)
 
+      total += 1
       with open(wav_path, 'rb') as wav_file:
         wav_data = wav_file.read()
 
@@ -76,12 +81,14 @@ def run_graph(wav_dir, labels, input_layer_name, output_layer_name,
       predictions, = sess.run(softmax_tensor, {input_layer_name: wav_data})
 
       # Sort to show labels in order of confidence
-      print('\n%s' % (wav_path.split('/')[-1]))
+      # print('\n%s' % (wav_path.split('/')[-1]))
       top_k = predictions.argsort()[-num_top_predictions:][::-1]
       for node_id in top_k:
         human_string = labels[node_id]
         score = predictions[node_id]
-        print('%s (score = %.5f)' % (human_string, score))
+        correct_prediction += int(str(human_string) == ground_truth_string)
+        # print('%s (score = %.5f)' % (human_string, score))
+    print('accuracy = %.2f' % (correct_prediction / total))
 
     return 0
 
@@ -129,7 +136,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--how_many_labels',
       type=int,
-      default=3,
+      default=1,
       help='Number of results to show.')
 
   FLAGS, unparsed = parser.parse_known_args()
