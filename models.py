@@ -173,50 +173,44 @@ def create_mobilenetv2(fingerprint_input, model_settings, is_training):
 
 
     normalizer = tc.layers.batch_norm
-    bn_params = {'is_training': is_training}
+    bn_params = {'is_training': True}
 
-    lay_para = {'index' : 0, 'normalizer' : normalizer, 'bn_params' : bn_params}
+    lay_para = {'index': 0, 'normalizer': normalizer, 'bn_params': bn_params}
 
     if is_training:
         dropout_prob = tf.placeholder(tf.float32, name='dropout_prob')
+
     input_frequency_size = model_settings['dct_coefficient_count']
     input_time_size = model_settings['spectrogram_length']
 
     fingerprint_4d = tf.reshape(fingerprint_input,
                               [-1, input_time_size, input_frequency_size, 1])
 
-    with tf.variable_scope('init_conv'):
-        output = tc.layers.conv2d(fingerprint_4d, 64, 3, 2,
-                                  normalizer_fn=normalizer, normalizer_params=bn_params)
-
+    output = tc.layers.conv2d(fingerprint_4d, 32, 3, 1, normalizer_fn=normalizer, normalizer_params=bn_params)
 
     def _inverted_bottleneck(lay_para, input, up_sample_rate, channels, subsample):
-        with tf.variable_scope('inverted_bottleneck{}_{}_{}'.format(lay_para['index'], up_sample_rate, subsample)):
-            lay_para['index'] += 1
-            stride = 2 if subsample else 1
-            output = tc.layers.conv2d(input, up_sample_rate * input.get_shape().as_list()[-1], 1,
-                                      activation_fn=tf.nn.relu6,
-                                      normalizer_fn=lay_para['normalizer'], normalizer_params=lay_para['bn_params'])
-            output = tc.layers.separable_conv2d(output, None, 3, 1, stride=stride,
-                                                activation_fn=tf.nn.relu6,
-                                                normalizer_fn=lay_para['normalizer'],
-                                                normalizer_params=lay_para['bn_params'])
-            output = tc.layers.conv2d(output, channels, 1, activation_fn=None,
-                                      normalizer_fn=lay_para['normalizer'], normalizer_params=lay_para['bn_params'])
-            if input.get_shape().as_list()[-1] == channels:
-                output = tf.add(input, output)
-            return output
+    # with tf.variable_scope('inverted_bottleneck{}_{}_{}'.format(lay_para['index'], up_sample_rate, subsample)):
+        lay_para['index'] += 1
+        stride = 2 if subsample else 1
+        output = tc.layers.conv2d(input, up_sample_rate * input.get_shape().as_list()[-1], 1,
+                                  activation_fn=tf.nn.relu6,
+                                  normalizer_fn=lay_para['normalizer'], normalizer_params=lay_para['bn_params'])
+        output = tc.layers.separable_conv2d(output, None, 3, 1, stride=stride,
+                                            activation_fn=tf.nn.relu6,
+                                            normalizer_fn=lay_para['normalizer'],
+                                            normalizer_params=lay_para['bn_params'])
+        output = tc.layers.conv2d(output, channels, 1, activation_fn=None,
+                                  normalizer_fn=lay_para['normalizer'], normalizer_params=lay_para['bn_params'])
+        if input.get_shape().as_list()[-1] == channels:
+            output = tf.add(input, output)
+        return output
 
 
     output = _inverted_bottleneck(lay_para, output, 1, 16, 0)
-    output = _inverted_bottleneck(lay_para, output, 6, 24, 1)
     output = _inverted_bottleneck(lay_para, output, 6, 24, 0)
     output = _inverted_bottleneck(lay_para, output, 6, 32, 1)
     output = _inverted_bottleneck(lay_para, output, 6, 32, 0)
-    output = _inverted_bottleneck(lay_para, output, 6, 32, 0)
     output = _inverted_bottleneck(lay_para, output, 6, 64, 1)
-    output = _inverted_bottleneck(lay_para, output, 6, 64, 0)
-    output = _inverted_bottleneck(lay_para, output, 6, 64, 0)
     output = _inverted_bottleneck(lay_para, output, 6, 64, 0)
     output = _inverted_bottleneck(lay_para, output, 6, 96, 0)
     output = _inverted_bottleneck(lay_para, output, 6, 96, 0)
