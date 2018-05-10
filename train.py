@@ -296,7 +296,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--data_dir',
       type=str,
-      default='/data/speech_command/speech_dataset/',
+      default='/data/speech_command/lighten_test/',
       help="""\
       Where to download the speech training data to.
       """)
@@ -338,22 +338,22 @@ if __name__ == '__main__':
   parser.add_argument(
       '--testing_percentage',
       type=int,
-      default=10,
+      default=20,
       help='What percentage of wavs to use as a test set.')
   parser.add_argument(
       '--validation_percentage',
       type=int,
-      default=10,
+      default=20,
       help='What percentage of wavs to use as a validation set.')
   parser.add_argument(
       '--sample_rate',
       type=int,
-      default=16000,
+      default=44100,
       help='Expected sample rate of the wavs',)
   parser.add_argument(
       '--clip_duration_ms',
       type=int,
-      default=1000,
+      default=1500,
       help='Expected duration in milliseconds of the wavs',)
   parser.add_argument(
       '--window_size_ms',
@@ -373,37 +373,37 @@ if __name__ == '__main__':
   parser.add_argument(
       '--how_many_training_steps',
       type=str,
-      default='10000,6000,2000',
+      default='500',
       help='How many training loops to run',)
   parser.add_argument(
       '--eval_step_interval',
       type=int,
-      default=400,
+      default=100,
       help='How often to evaluate the training results.')
   parser.add_argument(
       '--learning_rate',
       type=str,
-      default='0.001, 0.0001, 0.00001',
+      default='0.001',
       help='How large a learning rate to use when training.')
   parser.add_argument(
       '--batch_size',
       type=int,
-      default=100,
+      default=10,
       help='How many items to train with at once',)
   parser.add_argument(
       '--summaries_dir',
       type=str,
-      default='/model/02_speech_command_sp/retrain_logs/mobilenetv2',
+      default='/model/02_speech_command_sp/retrain_logs/conv',
       help='Where to save summary logs for TensorBoard.')
   parser.add_argument(
       '--wanted_words',
       type=str,
-      default='yes,no,up,down,left,right,on,off,stop,go',
+      default='查单词,读课文,翻译句子',
       help='Words to use (others will be added to an unknown label)',)
   parser.add_argument(
       '--train_dir',
       type=str,
-      default='/model/02_speech_command_sp/speech_commands_train/mobilenetv2',
+      default='/model/02_speech_command_sp/speech_commands_train/conv',
       help='Directory to write event logs and checkpoint.')
   parser.add_argument(
       '--save_step_interval',
@@ -418,8 +418,8 @@ if __name__ == '__main__':
   parser.add_argument(
       '--model_architecture',
       type=str,
-      # default='conv',
-      default='mobilenetv2',
+      default='conv',
+      # default='mobilenetv2',
       help='What model architecture to use')
   parser.add_argument(
       '--check_nans',

@@ -1,12 +1,5 @@
 _silence_
 _unknown_
-yes
-no
-up
-down
-left
-right
-on
-off
-stop
-go
+查单词
+读课文
+翻译句子
