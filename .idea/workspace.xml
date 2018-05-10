@@ -2,148 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39ad4189-19c3-4861-9c8f-691e566e7fed" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/freeze.py" beforeDir="false" afterPath="$PROJECT_DIR$/freeze.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_frozen_graph_conv.pb" beforeDir="false" afterPath="$PROJECT_DIR$/my_frozen_graph_conv.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_frozen_graph_mobilenetv2.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1524481891.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1524482571.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1524483772.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1524483921.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1524485927.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1524486081.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1524486284.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1524486348.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1524486518.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1524486708.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1524486863.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1524487014.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1524487132.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/validation/events.out.tfevents.1524481938.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/validation/events.out.tfevents.1524482620.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/validation/events.out.tfevents.1524483821.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/validation/events.out.tfevents.1524483970.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/validation/events.out.tfevents.1524485976.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/0423/train/events.out.tfevents.1524487241.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/0423/train/events.out.tfevents.1524487650.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/0423/train/events.out.tfevents.1524537567.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/0423/train/events.out.tfevents.1524537641.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/0423/validation/events.out.tfevents.1524487841.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/0423/validation/events.out.tfevents.1524537692.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/train/events.out.tfevents.1524538185.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/train/events.out.tfevents.1524551516.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/train/events.out.tfevents.1524551731.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/train/events.out.tfevents.1524558065.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/train/events.out.tfevents.1524560570.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/train/events.out.tfevents.1524573161.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/train/events.out.tfevents.1524573213.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/train/events.out.tfevents.1524573909.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/train/events.out.tfevents.1524627339.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/train/events.out.tfevents.1524627404.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/train/events.out.tfevents.1524632995.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/train/events.out.tfevents.1524641641.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/validation/events.out.tfevents.1524538378.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/validation/events.out.tfevents.1524558180.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/validation/events.out.tfevents.1524560848.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/validation/events.out.tfevents.1524573264.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/validation/events.out.tfevents.1524574101.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/validation/events.out.tfevents.1524627683.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/validation/events.out.tfevents.1524633267.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/mobilenetv2/validation/events.out.tfevents.1524642044.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/checkpoint" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-100.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-100.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-100.index" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-100.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-100.meta" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-100.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-200.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-200.data-00000-of-00001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-200.index" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-200.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-200.meta" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-200.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.pbtxt" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.pbtxt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv_labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/mobilenetv2.ckpt-200.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/mobilenetv2.ckpt-200.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/mobilenetv2.ckpt-200.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/mobilenetv2.ckpt-300.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/mobilenetv2.ckpt-300.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/mobilenetv2.ckpt-300.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/mobilenetv2.pbtxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/mobilenetv2_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/accuracy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.ckpt-100.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.ckpt-100.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.ckpt-100.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.ckpt-10000.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.ckpt-10000.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.ckpt-10000.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.ckpt-9600.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.ckpt-9600.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.ckpt-9600.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.ckpt-9700.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.ckpt-9700.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.ckpt-9700.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.ckpt-9800.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.ckpt-9800.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.ckpt-9800.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.ckpt-9900.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.ckpt-9900.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.ckpt-9900.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2.pbtxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0423/mobilenetv2_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0424/conv.pbtxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0424/conv_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0424/mobilenetv2.ckpt-10000.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0424/mobilenetv2.ckpt-10000.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0424/mobilenetv2.ckpt-10000.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0424/mobilenetv2.ckpt-9600.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0424/mobilenetv2.ckpt-9600.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0424/mobilenetv2.ckpt-9600.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0424/mobilenetv2.ckpt-9700.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0424/mobilenetv2.ckpt-9700.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0424/mobilenetv2.ckpt-9700.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0424/mobilenetv2.ckpt-9800.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0424/mobilenetv2.ckpt-9800.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0424/mobilenetv2.ckpt-9800.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0424/mobilenetv2.ckpt-9900.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0424/mobilenetv2.ckpt-9900.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0424/mobilenetv2.ckpt-9900.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0425/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0425/mobilenetv2.ckpt-2600.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0425/mobilenetv2.ckpt-2600.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0425/mobilenetv2.ckpt-2600.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0425/mobilenetv2.ckpt-2700.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0425/mobilenetv2.ckpt-2700.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0425/mobilenetv2.ckpt-2700.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0425/mobilenetv2.ckpt-2800.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0425/mobilenetv2.ckpt-2800.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0425/mobilenetv2.ckpt-2800.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0425/mobilenetv2.ckpt-2900.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0425/mobilenetv2.ckpt-2900.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0425/mobilenetv2.ckpt-2900.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0425/mobilenetv2.ckpt-3000.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0425/mobilenetv2.ckpt-3000.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0425/mobilenetv2.ckpt-3000.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0425/mobilenetv2.pbtxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/0425/mobilenetv2_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/mobilenetv2.ckpt-17600.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/mobilenetv2.ckpt-17600.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/mobilenetv2.ckpt-17600.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/mobilenetv2.ckpt-17700.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/mobilenetv2.ckpt-17700.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/mobilenetv2.ckpt-17700.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/mobilenetv2.ckpt-17800.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/mobilenetv2.ckpt-17800.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/mobilenetv2.ckpt-17800.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/mobilenetv2.ckpt-17900.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/mobilenetv2.ckpt-17900.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/mobilenetv2.ckpt-17900.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/mobilenetv2.ckpt-18000.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/mobilenetv2.ckpt-18000.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/mobilenetv2.ckpt-18000.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/mobilenetv2.pbtxt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/mobilenetv2/mobilenetv2_labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/input_data.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -153,14 +13,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.46496436">
+    <splitter split-orientation="horizontal" split-proportion="0.72981">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="train.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/train.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="97" column="30" lean-forward="true" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
+                <state relative-caret-position="270">
+                  <caret line="101" column="17" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -177,8 +37,17 @@
           <file leaf-file-name="input_data.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/input_data.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="182">
-                  <caret line="460" column="69" selection-start-line="460" selection-start-column="54" selection-end-line="460" selection-end-column="69" />
+                <state relative-caret-position="210">
+                  <caret line="379" column="38" selection-start-line="379" selection-start-column="38" selection-end-line="379" selection-end-column="38" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="gen_audio_ops.py" pinned="false" current-in-tab="true">
+            <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/gen_audio_ops.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="555">
+                  <caret line="66" column="34" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
@@ -290,12 +159,12 @@
       <find>mainmain</find>
       <find>batch_size</find>
       <find>batch</find>
-      <find>low</find>
       <find>16000</find>
       <find>BatchNorm/</find>
       <find>Variable_5</find>
       <find>Assign_5</find>
       <find>mobile</find>
+      <find>low</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -304,13 +173,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/input_data.py" />
         <option value="$PROJECT_DIR$/label_wav.py" />
         <option value="$PROJECT_DIR$/models.py" />
         <option value="$PROJECT_DIR$/label_wav_dir.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/train.py" />
         <option value="$PROJECT_DIR$/freeze.py" />
+        <option value="$PROJECT_DIR$/input_data.py" />
       </list>
     </option>
   </component>
@@ -483,7 +352,7 @@
     <frame x="65" y="-4" width="1983" height="1156" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.87975645" visible="true" weight="0.15078165" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.87975645" visible="true" weight="0.15078165" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.33015266" />
@@ -491,7 +360,7 @@
       <window_info anchor="bottom" id="Python Console" order="0" weight="0.32919848" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.6192748" />
       <window_info id="Structure" order="2" sideWeight="0.120243534" side_tool="true" weight="0.17196168" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.14980917" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.28339696" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.24427481" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -738,13 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/gen_audio_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="138" column="4" selection-start-line="138" selection-start-column="4" selection-end-line="138" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/keras/_impl/keras/layers/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -853,13 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="460" column="69" selection-start-line="460" selection-start-column="54" selection-end-line="460" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_streaming_accuracy.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4110">
@@ -926,8 +781,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="97" column="30" lean-forward="true" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="30" />
+        <state relative-caret-position="270">
+          <caret line="101" column="17" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="379" column="38" selection-start-line="379" selection-start-column="38" selection-end-line="379" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/gen_audio_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="66" column="34" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="34" />
         </state>
       </provider>
     </entry>

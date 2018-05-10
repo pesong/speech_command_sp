@@ -373,7 +373,10 @@ class AudioProcessor(object):
                                  self.background_volume_placeholder_)
     background_add = tf.add(background_mul, sliced_foreground)
     background_clamp = tf.clip_by_value(background_add, -1.0, 1.0)
+
+
     # Run the spectrogram and MFCC ops to get a 2D 'fingerprint' of the audio.
+    # todo  change spectrogram input
     spectrogram = contrib_audio.audio_spectrogram(
         background_clamp,
         window_size=model_settings['window_size_samples'],
