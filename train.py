@@ -99,8 +99,7 @@ def main(_):
       len(input_data.prepare_words_list(FLAGS.wanted_words.split(','))),
       FLAGS.sample_rate, FLAGS.clip_duration_ms, FLAGS.window_size_ms,
       FLAGS.window_stride_ms, FLAGS.dct_coefficient_count)
-  audio_processor = input_data.AudioProcessor(
-      FLAGS.data_url, FLAGS.data_dir, FLAGS.silence_percentage,
+  audio_processor = input_data.AudioProcessor(FLAGS.data_dir, FLAGS.silence_percentage,
       FLAGS.unknown_percentage,
       FLAGS.wanted_words.split(','), FLAGS.validation_percentage,
       FLAGS.testing_percentage, model_settings)
@@ -202,10 +201,12 @@ def main(_):
       if training_step <= training_steps_sum:
         learning_rate_value = learning_rates_list[i]
         break
+
     # Pull the audio samples we'll use for training.
     train_fingerprints, train_ground_truth = audio_processor.get_data(
         FLAGS.batch_size, 0, model_settings, FLAGS.background_frequency,
         FLAGS.background_volume, time_shift_samples, 'training', sess)
+
     # Run the graph with this batch of training data.
     train_summary, train_accuracy, cross_entropy_value, _, _ = sess.run(
         [
@@ -297,6 +298,7 @@ if __name__ == '__main__':
       '--data_dir',
       type=str,
       default='/data/speech_command/lighten_test/',
+      # default='/data/speech_command/speech_dataset/',
       help="""\
       Where to download the speech training data to.
       """)
@@ -348,7 +350,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--sample_rate',
       type=int,
-      default=44100,
+      default=16000,
       help='Expected sample rate of the wavs',)
   parser.add_argument(
       '--clip_duration_ms',
@@ -399,6 +401,7 @@ if __name__ == '__main__':
       '--wanted_words',
       type=str,
       default='查单词,读课文,翻译句子',
+      # default='yes,no,up,down,left,right,on,off,stop,go',
       help='Words to use (others will be added to an unknown label)',)
   parser.add_argument(
       '--train_dir',

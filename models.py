@@ -51,7 +51,7 @@ def prepare_model_settings(label_count, sample_rate, clip_duration_ms,
     spectrogram_length = 1 + int(length_minus_window / window_stride_samples)   # 频谱总长度
 
   # todo ????  输入的size？
-  fingerprint_size = dct_coefficient_count * spectrogram_length   # dct_coefficient_count: How many bins to use for the MFCC fingerprint
+  fingerprint_size = dct_coefficient_count * spectrogram_length  # dct_coefficient_count: How many bins to use for the MFCC fingerprint
 
   return {
       'desired_samples': desired_samples,

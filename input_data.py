@@ -27,6 +27,9 @@ import re
 import sys
 import tarfile
 
+import librosa
+import librosa.filters
+
 import numpy as np
 from six.moves import urllib
 from six.moves import xrange  # pylint: disable=redefined-builtin
@@ -151,57 +154,16 @@ def save_wav_file(filename, wav_data, sample_rate):
 class AudioProcessor(object):
   """Handles loading, partitioning, and preparing audio training data."""
 
-  def __init__(self, data_url, data_dir, silence_percentage, unknown_percentage,
+  def __init__(self, data_dir, silence_percentage, unknown_percentage,
                wanted_words, validation_percentage, testing_percentage,
                model_settings):
     self.data_dir = data_dir
-    self.maybe_download_and_extract_dataset(data_url, data_dir)
     self.prepare_data_index(silence_percentage, unknown_percentage,
                             wanted_words, validation_percentage,
                             testing_percentage)
     self.prepare_background_data()
     self.prepare_processing_graph(model_settings)
 
-  def maybe_download_and_extract_dataset(self, data_url, dest_directory):
-    """Download and extract data set tar file.
-
-    If the data set we're using doesn't already exist, this function
-    downloads it from the TensorFlow.org website and unpacks it into a
-    directory.
-    If the data_url is none, don't download anything and expect the data
-    directory to contain the correct files already.
-
-    Args:
-      data_url: Web location of the tar file containing the data set.
-      dest_directory: File path to extract data to.
-    """
-    if not data_url:
-      return
-    if not os.path.exists(dest_directory):
-      os.makedirs(dest_directory)
-    filename = data_url.split('/')[-1]
-    filepath = os.path.join(dest_directory, filename)
-    if not os.path.exists(filepath):
-
-      def _progress(count, block_size, total_size):
-        sys.stdout.write(
-            '\r>> Downloading %s %.1f%%' %
-            (filename, float(count * block_size) / float(total_size) * 100.0))
-        sys.stdout.flush()
-
-      try:
-        filepath, _ = urllib.request.urlretrieve(data_url, filepath, _progress)
-      except:
-        tf.logging.error('Failed to download URL: %s to folder: %s', data_url,
-                         filepath)
-        tf.logging.error('Please make sure you have enough free space and'
-                         ' an internet connection')
-        raise
-      print()
-      statinfo = os.stat(filepath)
-      tf.logging.info('Successfully downloaded %s (%d bytes)', filename,
-                      statinfo.st_size)
-    tarfile.open(filepath, 'r:gz').extractall(dest_directory)
 
   def prepare_data_index(self, silence_percentage, unknown_percentage,
                          wanted_words, validation_percentage,
@@ -311,19 +273,30 @@ class AudioProcessor(object):
     background_dir = os.path.join(self.data_dir, BACKGROUND_NOISE_DIR_NAME)
     if not os.path.exists(background_dir):
       return self.background_data
-    with tf.Session(graph=tf.Graph()) as sess:
-      wav_filename_placeholder = tf.placeholder(tf.string, [])
-      wav_loader = io_ops.read_file(wav_filename_placeholder)
-      wav_decoder = contrib_audio.decode_wav(wav_loader, desired_channels=1)
-      search_path = os.path.join(self.data_dir, BACKGROUND_NOISE_DIR_NAME,
-                                 '*.wav')
-      for wav_path in gfile.Glob(search_path):
-        wav_data = sess.run(
-            wav_decoder,
-            feed_dict={wav_filename_placeholder: wav_path}).audio.flatten()
-        self.background_data.append(wav_data)
-      if not self.background_data:
-        raise Exception('No background wav files were found in ' + search_path)
+
+    search_path = os.path.join(self.data_dir, BACKGROUND_NOISE_DIR_NAME, '*.wav')
+    for wav_path in gfile.Glob(search_path):
+        wav_decode_data, _ = librosa.load(wav_path, sr=None)
+        self.background_data.append(wav_decode_data)
+
+    #
+    # self.background_data = []
+    # background_dir = os.path.join(self.data_dir, BACKGROUND_NOISE_DIR_NAME)
+    # if not os.path.exists(background_dir):
+    #   return self.background_data
+    # with tf.Session(graph=tf.Graph()) as sess:
+    #   wav_filename_placeholder = tf.placeholder(tf.string, [])
+    #   wav_loader = io_ops.read_file(wav_filename_placeholder)
+    #   wav_decoder = contrib_audio.decode_wav(wav_loader, desired_channels=1)
+    #   search_path = os.path.join(self.data_dir, BACKGROUND_NOISE_DIR_NAME,
+    #                              '*.wav')
+    #   for wav_path in gfile.Glob(search_path):
+    #     wav_data = sess.run(
+    #         wav_decoder,
+    #         feed_dict={wav_filename_placeholder: wav_path}).audio.flatten()
+    #     self.background_data.append(wav_data)
+    #   if not self.background_data:
+    #     raise Exception('No background wav files were found in ' + search_path)
 
   def prepare_processing_graph(self, model_settings):
     """Builds a TensorFlow graph to apply the input distortions.
@@ -351,6 +324,8 @@ class AudioProcessor(object):
     wav_loader = io_ops.read_file(self.wav_filename_placeholder_)
     wav_decoder = contrib_audio.decode_wav(
         wav_loader, desired_channels=1, desired_samples=desired_samples)
+    self.sample_rate_ = wav_decoder.sample_rate
+
     # Allow the audio sample's volume to be adjusted.
     self.foreground_volume_placeholder_ = tf.placeholder(tf.float32, [])
     scaled_foreground = tf.multiply(wav_decoder.audio,
@@ -372,13 +347,28 @@ class AudioProcessor(object):
     background_mul = tf.multiply(self.background_data_placeholder_,
                                  self.background_volume_placeholder_)
     background_add = tf.add(background_mul, sliced_foreground)
-    background_clamp = tf.clip_by_value(background_add, -1.0, 1.0)
+    self.background_clamp = tf.clip_by_value(background_add, -1.0, 1.0)
+
+
+    # todo  change spectrogram input
+    # spectrogram = librosa.feature.melspectrogram(
+    #     self.background_clamp.eval(),
+    #     sr=wav_decoder.sample_rate,
+    #     n_fft=model_settings['window_size_samples'],
+    #     hop_length=model_settings['window_stride_samples'],
+    #     power=2.0)
+    #
+    # self.mfcc = librosa.feature.mfcc(
+    #     spectrogram.eval(),
+    #     sr=wav_decoder.sample_rate,
+    #     n_mfcc=model_settings['dct_coefficient_count']
+    #     )
 
 
     # Run the spectrogram and MFCC ops to get a 2D 'fingerprint' of the audio.
-    # todo  change spectrogram input
+
     spectrogram = contrib_audio.audio_spectrogram(
-        background_clamp,
+        self.background_clamp,
         window_size=model_settings['window_size_samples'],
         stride=model_settings['window_stride_samples'],
         magnitude_squared=True)
@@ -386,6 +376,7 @@ class AudioProcessor(object):
         spectrogram,
         wav_decoder.sample_rate,
         dct_coefficient_count=model_settings['dct_coefficient_count'])
+
 
   def set_size(self, mode):
     """Calculates the number of samples in the dataset partition.
@@ -459,6 +450,7 @@ class AudioProcessor(object):
           self.time_shift_padding_placeholder_: time_shift_padding,
           self.time_shift_offset_placeholder_: time_shift_offset,
       }
+
       # Choose a section of background noise to mix in.
       if use_background or sample['label'] == SILENCE_LABEL:
         background_index = np.random.randint(len(self.background_data))
@@ -484,8 +476,28 @@ class AudioProcessor(object):
         input_dict[self.foreground_volume_placeholder_] = 0
       else:
         input_dict[self.foreground_volume_placeholder_] = 1
+
       # Run the graph to produce the output audio.
+
+      # # todo:  generate mfcc data
+      # background_clamp_ndarray = sess.run(self.background_clamp, feed_dict=input_dict)
+      #
+      # spectrogram_ndarray = librosa.feature.melspectrogram(
+      #     background_clamp_ndarray.eval(),
+      #     sr=self.sample_rate_,
+      #     n_fft=model_settings['window_size_samples'],
+      #     hop_length=model_settings['window_stride_samples'],
+      #     power=2.0)
+      #
+      # self.mfcc_ = librosa.feature.mfcc(
+      #     spectrogram_ndarray,
+      #     sr=self.sample_rate_,
+      #     n_mfcc=model_settings['dct_coefficient_count']
+      #     )
+      # data[i - offset, :] = self.mfcc_.flatten()
+
       data[i - offset, :] = sess.run(self.mfcc_, feed_dict=input_dict).flatten()
+
       label_index = self.word_to_index[sample['label']]
       labels[i - offset] = label_index
     return data, labels
