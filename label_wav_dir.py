@@ -88,7 +88,7 @@ def run_graph(wav_dir, labels, input_layer_name, output_layer_name,
         score = predictions[node_id]
         correct_prediction += int(str(human_string) == ground_truth_string)
         print('%s (score = %.5f)' % (human_string, score))
-    print('accuracy = %.2f' % (correct_prediction / total))
+    print('accuracy = %.2f' % (correct_prediction / total), int(total))
 
     return 0
 

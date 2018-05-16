@@ -5,8 +5,8 @@ tutorial at https://www.tensorflow.org/versions/master/tutorials/audio_recogniti
 
 # generate frozen model file
 python freeze.py \
---start_checkpoint=/model/02_speech_command_sp/speech_commands_train/conv/conv.ckpt-500 \
---output_file=/model/02_speech_command_sp/my_frozen_graph_conv.pb
+--start_checkpoint=/model/02_speech_command_sp/speech_commands_train/conv/conv.ckpt-8000 \
+--output_file=/model/02_speech_command_sp/my_frozen_graph_conv_8000.pb
 
 
 
@@ -27,9 +27,10 @@ python label_wav.py \
 
 # test dir
 python label_wav_dir.py \
---graph=/model/02_speech_command_sp/my_frozen_graph_conv.pb \
+--graph=/model/02_speech_command_sp//my_frozen_graph_conv_8000.pb \
 --labels=/model/02_speech_command_sp/speech_commands_train/conv/conv_labels.txt \
---wav_dir=/data/speech_command/lighten_test/1
+--wav_dir=/data/speech_command/lighten_test/翻译句子
+
 
 
 

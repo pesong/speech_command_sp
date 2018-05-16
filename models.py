@@ -41,7 +41,7 @@ def prepare_model_settings(label_count, sample_rate, clip_duration_ms,
   Returns:
     Dictionary containing common settings.
   """
-  desired_samples = int(sample_rate * clip_duration_ms / 1000)    # 音频总帧数
+  desired_samples = int(sample_rate * clip_duration_ms / 1000)    # 音频维度
   window_size_samples = int(sample_rate * window_size_ms / 1000)      # 窗口大小
   window_stride_samples = int(sample_rate * window_stride_ms / 1000)      # 滑动窗口步长
   length_minus_window = (desired_samples - window_size_samples)
