@@ -5,8 +5,8 @@ tutorial at https://www.tensorflow.org/versions/master/tutorials/audio_recogniti
 
 # generate frozen model file
 python freeze.py \
---start_checkpoint=/model/02_speech_command_sp/speech_commands_train/conv/conv.ckpt-5800 \
---output_file=/model/02_speech_command_sp/my_frozen_graph_conv_5800_0519_1500du_30re.pb
+--start_checkpoint=/model/02_speech_command_sp/speech_commands_train/mobilenetv2/mobilenetv2.ckpt-100 \
+--output_file=/model/02_speech_command_sp/my_frozen_graph_mobilenetv2_100_0519_1500du_30re.pb
 
 
 

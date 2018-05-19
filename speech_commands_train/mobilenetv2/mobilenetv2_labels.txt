@@ -1,0 +1,11 @@
+_silence_
+_unknown_
+查单词
+读课文
+翻译句子
+stop_
+left_
+right_
+cat_
+seven_
+six_

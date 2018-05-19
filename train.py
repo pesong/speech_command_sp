@@ -305,7 +305,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--background_volume',
         type=float,
-        default=0.1,
+        default=0.3,
         help="""\
       How loud the background noise should be, between 0 and 1.
       """)
@@ -326,7 +326,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--unknown_percentage',
         type=float,
-        default=0.0,
+        default=40.0,
         help="""\
       How much of the training data should be unknown words.
       """)
@@ -380,7 +380,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--eval_step_interval',
         type=int,
-        default=1000,
+        default=400,
         help='How often to evaluate the training results.')
     parser.add_argument(
         '--learning_rate',
@@ -390,28 +390,28 @@ if __name__ == '__main__':
     parser.add_argument(
         '--batch_size',
         type=int,
-        default=512,
+        default=100,
         help='How many items to train with at once', )
     parser.add_argument(
         '--summaries_dir',
         type=str,
-        default='/model/02_speech_command_sp/retrain_logs/conv',
+        default='/model/02_speech_command_sp/retrain_logs/mobilenetv2',
         help='Where to save summary logs for TensorBoard.')
     parser.add_argument(
         '--wanted_words',
         type=str,
-        default='查单词,读课文,翻译句子',
+        default='查单词,读课文,翻译句子,stop_,left_,right_,cat_,seven_,six_',
         # default='yes,no,up,down,left,right,on,off,stop,go',
         help='Words to use (others will be added to an unknown label)', )
     parser.add_argument(
         '--train_dir',
         type=str,
-        default='/model/02_speech_command_sp/speech_commands_train/conv',
+        default='/model/02_speech_command_sp/speech_commands_train/mobilenetv2',
         help='Directory to write event logs and checkpoint.')
     parser.add_argument(
         '--save_step_interval',
         type=int,
-        default=200,
+        default=100,
         help='Save model checkpoint every save_steps.')
     parser.add_argument(
         '--start_checkpoint',
@@ -421,8 +421,8 @@ if __name__ == '__main__':
     parser.add_argument(
         '--model_architecture',
         type=str,
-        default='conv',
-        # default='mobilenetv2',
+        # default='conv',
+        default='mobilenetv2',
         help='What model architecture to use')
     parser.add_argument(
         '--check_nans',

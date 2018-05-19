@@ -167,12 +167,12 @@ if __name__ == '__main__':
   parser.add_argument(
       '--model_architecture',
       type=str,
-      default='conv',
+      default='mobilenetv2',
       help='What model architecture to use')
   parser.add_argument(
       '--wanted_words',
       type=str,
-      default='查单词,读课文,翻译句子,不知道',
+      default='查单词,读课文,翻译句子,stop_,left_,right_,cat_,seven_,six_',
       help='Words to use (others will be added to an unknown label)',)
   parser.add_argument(
       '--output_file', type=str, help='Where to save the frozen graph.')

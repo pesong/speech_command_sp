@@ -3,4 +3,9 @@ _unknown_
 查单词
 读课文
 翻译句子
-不知道
+stop_
+left_
+right_
+cat_
+seven_
+six_
