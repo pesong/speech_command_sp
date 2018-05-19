@@ -326,7 +326,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--unknown_percentage',
         type=float,
-        default=40.0,
+        default=0.0,
         help="""\
       How much of the training data should be unknown words.
       """)
@@ -400,7 +400,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--wanted_words',
         type=str,
-        default='查单词,读课文,翻译句子,不知道',
+        default='查单词,读课文,翻译句子',
         # default='yes,no,up,down,left,right,on,off,stop,go',
         help='Words to use (others will be added to an unknown label)', )
     parser.add_argument(

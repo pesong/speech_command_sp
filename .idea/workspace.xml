@@ -4,71 +4,23 @@
     <list default="true" id="39ad4189-19c3-4861-9c8f-691e566e7fed" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/freeze.py" beforeDir="false" afterPath="$PROJECT_DIR$/freeze.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/input_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/label_wav_dir.py" beforeDir="false" afterPath="$PROJECT_DIR$/label_wav_dir.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_frozen_graph_conv.pb" beforeDir="false" afterPath="$PROJECT_DIR$/my_frozen_graph_conv.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525920263.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525923990.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525945761.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525946729.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525946764.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525947219.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525947278.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525948443.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525953709.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525954864.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525955988.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525956020.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525956549.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525956953.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525957048.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525957087.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525957280.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525957368.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525957504.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525957646.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525957700.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525957741.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525957870.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525957911.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1525957956.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1526031377.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1526117163.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1526117203.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1526117324.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1526276784.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1526276934.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1526277239.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1526277383.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1526277423.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1526278059.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/train/events.out.tfevents.1526278091.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/validation/events.out.tfevents.1525920275.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/validation/events.out.tfevents.1525924002.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/validation/events.out.tfevents.1526031393.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/validation/events.out.tfevents.1526117214.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/validation/events.out.tfevents.1526117336.dlserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrain_logs/conv/validation/events.out.tfevents.1526278066.dlserver" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/checkpoint" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/checkpoint" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-100.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-100.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-100.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-200.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-200.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-200.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-300.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-300.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-300.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-400.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-400.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-400.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-500.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-500.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-500.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.pbtxt" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.pbtxt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv_labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv_labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7200.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7200.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7200.index" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7200.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7200.meta" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7200.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7400.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7400.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7400.index" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7400.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7400.meta" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7400.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7600.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7600.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7600.index" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7600.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7600.meta" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7600.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7800.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7800.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7800.index" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7800.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7800.meta" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-7800.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-8000.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-8000.data-00000-of-00001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-8000.index" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-8000.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-8000.meta" beforeDir="false" afterPath="$PROJECT_DIR$/speech_commands_train/conv/conv.ckpt-8000.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,14 +31,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5205562">
+    <splitter split-orientation="horizontal" split-proportion="0.59317905">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="train.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/train.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="301">
-                  <caret line="260" column="44" selection-start-line="260" selection-start-column="29" selection-end-line="260" selection-end-column="44" />
+                <state relative-caret-position="527">
+                  <caret line="424" column="30" selection-start-line="424" selection-start-column="19" selection-end-line="424" selection-end-column="30" />
+                  <folding>
+                    <element signature="e#2953#2991#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -95,19 +50,10 @@
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="FIRST">
-                  <first_editor relative-caret-position="120">
-                    <caret line="8" column="67" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="67" />
+                  <first_editor relative-caret-position="360">
+                    <caret line="24" column="66" lean-forward="true" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
                   </first_editor>
                   <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="conv_labels.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/speech_commands_train/conv/conv_labels.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
                 </state>
               </provider>
             </entry>
@@ -115,8 +61,8 @@
           <file leaf-file-name="freeze.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/freeze.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="990">
-                  <caret line="79" column="22" selection-start-line="79" selection-start-column="2" selection-end-line="79" selection-end-column="22" />
+                <state relative-caret-position="1845">
+                  <caret line="160" column="60" selection-start-line="160" selection-start-column="60" selection-end-line="160" selection-end-column="60" />
                 </state>
               </provider>
             </entry>
@@ -124,8 +70,8 @@
           <file leaf-file-name="label_wav_dir.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/label_wav_dir.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1185">
-                  <caret line="90" column="70" selection-start-line="90" selection-start-column="70" selection-end-line="90" selection-end-column="70" />
+                <state relative-caret-position="153">
+                  <caret line="109" selection-start-line="109" selection-end-line="109" />
                 </state>
               </provider>
             </entry>
@@ -133,8 +79,8 @@
           <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="915">
-                  <caret line="68" column="46" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="46" />
+                <state relative-caret-position="885">
+                  <caret line="302" column="25" selection-start-line="302" selection-start-column="25" selection-end-line="302" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -142,10 +88,15 @@
           <file leaf-file-name="input_data_test.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/input_data_test.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="645">
-                  <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+                <state relative-caret-position="315">
+                  <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
                 </state>
               </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="freeze_test.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/freeze_test.py">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
@@ -155,11 +106,20 @@
           <file leaf-file-name="input_data.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/input_data.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="109">
-                  <caret line="332" column="31" selection-start-line="332" selection-start-column="31" selection-end-line="332" selection-end-column="31" />
+                <state relative-caret-position="132">
+                  <caret line="386" selection-start-line="386" selection-end-line="386" />
                   <folding>
                     <element signature="e#746#784#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="gen_audio_ops.py" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/gen_audio_ops.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="29">
+                  <caret line="101" column="57" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="40" />
                 </state>
               </provider>
             </entry>
@@ -177,14 +137,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Assign_5</find>
-      <find>low</find>
-      <find>.mfcc</find>
-      <find>wav_decoder</find>
-      <find>.mfcc_</find>
-      <find>ndim</find>
-      <find>valid_audio</find>
-      <find>.ndim</find>
       <find>mobile</find>
       <find>channel</find>
       <find>run</find>
@@ -198,7 +150,6 @@
       <find>load_wav_file</find>
       <find>save_wav_file</find>
       <find>get_temp_dir</find>
-      <find>get_data</find>
       <find>input_data</find>
       <find>data_dir</find>
       <find>silence_percentage</find>
@@ -207,6 +158,15 @@
       <find>desired_samples</find>
       <find>44100</find>
       <find>unk</find>
+      <find>get_data</find>
+      <find>mfcc</find>
+      <find>dct_coefficient_count</find>
+      <find>unknown_per</find>
+      <find>unknow</find>
+      <find>unknown</find>
+      <find>clip_stride_ms</find>
+      <find>validation</find>
+      <find>window_size_ms</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -221,18 +181,18 @@
         <option value="$PROJECT_DIR$/input_data_sp.py" />
         <option value="$PROJECT_DIR$/input_data.py" />
         <option value="$PROJECT_DIR$/models.py" />
-        <option value="$PROJECT_DIR$/freeze.py" />
         <option value="$PROJECT_DIR$/label_wav_dir.py" />
+        <option value="$PROJECT_DIR$/freeze.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/train.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="936" />
-    <option name="y" value="76" />
-    <option name="width" value="986" />
-    <option name="height" value="1076" />
+    <option name="x" value="225" />
+    <option name="y" value="127" />
+    <option name="width" value="984" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -248,15 +208,6 @@
               <item name="02_speech_command_sp" type="b2602c69:ProjectViewProjectNode" />
               <item name="02_speech_command_sp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="02_speech_command_sp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="02_speech_command_sp" type="462c0819:PsiDirectoryNode" />
-              <item name="speech_commands_train" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="02_speech_command_sp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -264,7 +215,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../0_lighten_speech_command_refactor" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RunDashboard">
@@ -436,15 +387,16 @@
     <frame x="65" y="-4" width="1983" height="1156" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.64854616" visible="true" weight="0.16591024" />
-      <window_info anchor="bottom" id="TODO" order="10" weight="0.12690839" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.84527874" visible="true" weight="0.22239032" />
+      <window_info anchor="bottom" id="TODO" order="10" weight="0.384542" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.45706108" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.33015266" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.39503816" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.1812977" />
       <window_info anchor="bottom" id="Python Console" order="0" weight="0.32919848" />
-      <window_info id="Structure" order="2" sideWeight="0.35145387" side_tool="true" visible="true" weight="0.16591024" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.245229" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.2557252" />
+      <window_info id="Structure" order="2" sideWeight="0.15472127" side_tool="true" visible="true" weight="0.22239032" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.16125955" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.6269084" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -452,7 +404,6 @@
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.33015266" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -498,15 +449,15 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/train.py</url>
-          <line>101</line>
-          <option name="timeStamp" value="25" />
+          <url>file://$PROJECT_DIR$/input_data.py</url>
+          <line>371</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="26" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -521,20 +472,20 @@
         <watch expression="model_settings['window_stride_samples']" />
         <watch expression="self" />
         <watch expression="spectrogram_ndarray" />
+        <watch expression="spectrogram.eval()" language="Python" />
       </configuration>
     </watches-manager>
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>spectrogram.eval()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/input_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1980">
-          <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
-          <folding>
-            <element signature="e#746#784#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/input_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7335">
@@ -744,13 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/gen_audio_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-142">
-          <caret line="138" column="41" selection-start-line="138" selection-start-column="25" selection-end-line="138" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/librosa/core/spectrum.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
@@ -821,56 +765,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/gen_audio_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="101" column="57" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freeze_test.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/input_data_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+        <state relative-caret-position="315">
+          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech_commands_train/conv/conv_labels.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="302" column="25" selection-start-line="302" selection-start-column="25" selection-end-line="302" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/input_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="332" column="31" selection-start-line="332" selection-start-column="31" selection-end-line="332" selection-end-column="31" />
+        <state relative-caret-position="132">
+          <caret line="386" selection-start-line="386" selection-end-line="386" />
           <folding>
             <element signature="e#746#784#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="68" column="46" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/label_wav_dir.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="90" column="70" selection-start-line="90" selection-start-column="70" selection-end-line="90" selection-end-column="70" />
+        <state relative-caret-position="153">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/freeze.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="79" column="22" selection-start-line="79" selection-start-column="2" selection-end-line="79" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/speech_commands_train/conv/conv_labels.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        <state relative-caret-position="1845">
+          <caret line="160" column="60" selection-start-line="160" selection-start-column="60" selection-end-line="160" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="120">
-            <caret line="8" column="67" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="67" />
+          <first_editor relative-caret-position="360">
+            <caret line="24" column="66" lean-forward="true" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
           </first_editor>
           <second_editor />
         </state>
@@ -878,8 +832,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="260" column="44" selection-start-line="260" selection-start-column="29" selection-end-line="260" selection-end-column="44" />
+        <state relative-caret-position="527">
+          <caret line="424" column="30" selection-start-line="424" selection-start-column="19" selection-end-line="424" selection-end-column="30" />
+          <folding>
+            <element signature="e#2953#2991#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
