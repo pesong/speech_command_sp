@@ -297,7 +297,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--data_dir',
         type=str,
-        default='/data/speech_command/lighten_test/',
+        default='/data/speech_command/lighten/',
         # default='/data/speech_command/speech_dataset/',
         help="""\
       Where to download the speech training data to.
@@ -305,7 +305,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--background_volume',
         type=float,
-        default=0.3,
+        default=0.1,
         help="""\
       How loud the background noise should be, between 0 and 1.
       """)
@@ -326,14 +326,14 @@ if __name__ == '__main__':
     parser.add_argument(
         '--unknown_percentage',
         type=float,
-        default=40.0,
+        default=0.0,
         help="""\
       How much of the training data should be unknown words.
       """)
     parser.add_argument(
         '--time_shift_ms',
         type=float,
-        default=100.0,
+        default=40.0,
         help="""\
       Range to randomly shift the training audio by in time.
       """)
@@ -355,7 +355,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--clip_duration_ms',
         type=int,
-        default=1500,
+        default=1300,
         help='Expected duration in milliseconds of the wavs', )
     parser.add_argument(
         '--window_size_ms',
@@ -390,23 +390,23 @@ if __name__ == '__main__':
     parser.add_argument(
         '--batch_size',
         type=int,
-        default=100,
+        default=256,
         help='How many items to train with at once', )
     parser.add_argument(
         '--summaries_dir',
         type=str,
-        default='/model/02_speech_command_sp/retrain_logs/mobilenetv2',
+        default='/model/02_speech_command_sp/retrain_logs/conv',
         help='Where to save summary logs for TensorBoard.')
     parser.add_argument(
         '--wanted_words',
         type=str,
-        default='查单词,读课文,翻译句子,stop_,left_,right_,cat_,seven_,six_',
+        default='查单词,读课文,翻译句子,others',
         # default='yes,no,up,down,left,right,on,off,stop,go',
         help='Words to use (others will be added to an unknown label)', )
     parser.add_argument(
         '--train_dir',
         type=str,
-        default='/model/02_speech_command_sp/speech_commands_train/mobilenetv2',
+        default='/model/02_speech_command_sp/speech_commands_train/conv',
         help='Directory to write event logs and checkpoint.')
     parser.add_argument(
         '--save_step_interval',
@@ -421,8 +421,8 @@ if __name__ == '__main__':
     parser.add_argument(
         '--model_architecture',
         type=str,
-        # default='conv',
-        default='mobilenetv2',
+        default='conv',
+        # default='mobilenetv2',
         help='What model architecture to use')
     parser.add_argument(
         '--check_nans',

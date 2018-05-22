@@ -137,7 +137,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--clip_duration_ms',
       type=int,
-      default=1500,
+      default=1300,
       help='Expected duration in milliseconds of the wavs',)
   parser.add_argument(
       '--clip_stride_ms',
@@ -167,12 +167,12 @@ if __name__ == '__main__':
   parser.add_argument(
       '--model_architecture',
       type=str,
-      default='mobilenetv2',
+      default='conv',
       help='What model architecture to use')
   parser.add_argument(
       '--wanted_words',
       type=str,
-      default='查单词,读课文,翻译句子,stop_,left_,right_,cat_,seven_,six_',
+      default='查单词,读课文,翻译句子,others',
       help='Words to use (others will be added to an unknown label)',)
   parser.add_argument(
       '--output_file', type=str, help='Where to save the frozen graph.')
