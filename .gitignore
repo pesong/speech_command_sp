@@ -1,0 +1,11 @@
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+__pycache__
+retrain_logs
+graph_file
+
